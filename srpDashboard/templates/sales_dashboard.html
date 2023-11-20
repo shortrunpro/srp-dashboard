@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dropdown px-5 mx-5 py-4 text-start">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+    Date Range
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="week">Current Week</a></li>
+    <li><a class="dropdown-item" href="month">This Month</a></li>
+    <li><a class="dropdown-item" href="#">Link 3</a></li>
+  </ul>
+</div>
+  {% autoescape off %}
+    {{ sales_graph }}
+  {% endautoescape %}
+{% endblock content %}
